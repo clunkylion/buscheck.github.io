@@ -5,30 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/styles.css">
   
-  <title>Frontend Mentor | Bookmark landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>BUSCHECK</title>
 </head>
 <body>
-
-  Features
-  Pricing
-  Contact
-  Login
-
-  A Simple Bookmark Manager
-
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
-
-  Get it on Chrome
-  Get it on Firefox
-
+  <input type="checkbox" id="open" class="menu-checkbox">
+  <header class="header">
+    <div class="u-wrapper">
+      <div class="header-content">
+        <a href="#" class="header-logo"></a>
+        <!-- <img src="src/assets/logo.png" alt=""> -->
+        <label for="open" class="menu-open"></label>
+        <nav class="menu">
+          <div class="u-wrapper">
+            <ul>
+              <li>
+              <a href="">Inicio</a>
+              </li>
+              <li>
+                <a href="">Servicios</a>
+              </li>
+              <li>
+                <a href="">Contacto</a>
+              </li>
+              <li>
+                <a href="">Login</a>
+              </li>
+            </ul>
+          </div>
+          
+        </nav>
+      </div>
+      
+    </div>
+    
+  </header>
+  <section class="hero">
+    <h1>A Simple Bookmark Manager</h1>
+    <p>A clean and simple interface to organize your favourite websites. Open a new 
+      browser tab and see your sites load instantly. Try it for free.</p>
+    <button>Get it on Chrome</button>
+    <button>Get it on Firefox</button>
+  </section>
   Features
 
   Our aim is to make it quick and easy for you to access your favourite websites. 

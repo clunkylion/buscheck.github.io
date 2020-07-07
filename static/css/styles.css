@@ -1,0 +1,109 @@
+.hero {
+  border: 1px solid #f00;
+}
+.menu {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 89%;
+  background: rgba(92,61,177,0.9);
+  height: 100vh;
+  transform: translateY(-50px);
+  transition: 0.3s transform, 0.3s opacity;
+  will-change: transform;
+}
+.menu ul {
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+.menu li :hover {
+  border: 2px solid #ff3b8c;
+  border-radius: 4px;
+}
+.menu li:last-child {
+  border: 2px solid #ff3b8c;
+  border-radius: 4px;
+  margin-top: 1em;
+  padding: 0.7em;
+}
+.menu li:last-child :hover {
+  background: #ff3b8c;
+  border: none;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding: 1em;
+  letter-spacing: 2px;
+}
+.menu-open {
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  cursor: pointer;
+  background: url("../assets/icon-hamburger.svg") no-repeat center;
+}
+.menu-checkbox {
+  display: none;
+}
+.menu-checkbox:checked ~ .header {
+  background: rgba(92,61,177,0.9);
+}
+.menu-checkbox:checked ~ .header .menu-open {
+  background-image: url("../assets/icon-close.svg");
+}
+.menu-checkbox:checked ~ .header .header-logo {
+  background-image: url("../assets/logo-white.png");
+}
+.menu-checkbox:checked ~ .header .menu {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+.header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5em 0;
+  transition: 0.3s background;
+}
+.header-logo {
+  display: inline-flex;
+  width: 180px;
+  height: 45px;
+  background: url("../assets/logo.png") no-repeat center;
+  background-size: contain;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+:root {
+  --softBlue: #5368df;
+  --softRed: #fa5757;
+  --grayishBlue: #9194a1;
+  --VeryDarkBlue: #252b46;
+}
+body {
+  background: #d3d3d3;
+  font-family: 'Rubik', sans-serif;
+  color: var(--veryDarkBlue);
+  font-size: 18px;
+}
+.u-wrapper {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 1em;
+}

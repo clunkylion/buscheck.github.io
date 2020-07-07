@@ -1,0 +1,80 @@
+.menu{
+    //border: 1px solid blue
+    //margin: 10px
+    //display: none
+    visibility hidden
+    position: absolute
+    opacity: 0
+    left: 0
+    right: 0
+    top: 89%
+    background: rgba(92, 61, 177, 0.9)
+    //padding: 1em
+    height: 100vh
+    transform: translateY(-50px)
+    transition: .3s transform, .3s opacity
+    will-change: transform
+    ul{
+        padding: 0
+        list-style: none 
+    }
+    li{
+        border-top: 1px solid rgba(255,255,255,.3)
+        :hover{
+            border: 2px solid #ff3b8c
+            border-radius:4px
+        }
+        &:last-child{
+            border: 2px solid #ff3b8c
+            border-radius:4px 
+            margin-top:  1em
+            padding: .7em
+            :hover{
+                background: #ff3b8c
+                border: none
+            }
+        }
+    }
+    a{
+        color: white
+        text-decoration: none
+        text-transform: uppercase
+        //border: 1px solid red
+        display: block
+        text-align: center
+        padding: 1em
+        letter-spacing: 2px
+    }
+    &-open{
+        //border: 1px solid red
+        user-select none
+        width: 40px
+        height 40px
+        display: inline-flex
+        cursor pointer
+        background url('../assets/icon-hamburger.svg') no-repeat center
+    }
+    &-checkbox{
+        display: none  
+       &:checked {
+           & ~ .header{
+                background: rgba(92, 61, 177, 0.9)
+                .menu-open{
+                    //border: 1px solid blue    
+                    background-image: url('../assets/icon-close.svg')
+                }
+                & .header-logo{
+                        background-image: url('../assets/logo-white.png')
+                }
+            }
+            & ~ .header .menu{
+                    //border: 1px solid green
+                    transform: translateY(0)
+                    visibility: visible
+                    opacity: 1
+                    //display: block
+                    
+            } 
+        }
+    }
+}
