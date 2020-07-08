@@ -4,6 +4,8 @@
 @import './download.styl'
 @import './question.styl'
 @import '/carousel.styl'
+@import '/join.styl'
+@import '/footer.styl'
 :root{
     --softBlue: hsl(231, 69%, 60%)
     --softRed: hsl(0, 94%, 66%)
@@ -48,6 +50,11 @@ ul{
     font-size: 1.5em
     margin: .7em 0
 }
+.u-h4{
+    @extends .u-h1
+    font-size: 1.2em
+    color: white
+}
 .u-p{
     color: var(--mainPurple)
     line-height: 1.8
@@ -73,5 +80,8 @@ ul{
     }
     &.is-fullWidth{
         width 100%
+    }
+    &.is-pink{
+        background: var(--mainPink)
     }
 }
