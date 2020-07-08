@@ -2,12 +2,12 @@
     margin-top: 2em
     border-top: 1px solid var(--mainPink)
     &-link{
-        //border: 1px solid blue
         border-bottom: 1.4px solid var(--mainPink)
         color: var(--mainPurple)
     }
     &-content{
         display: none    
+        flex-direction: column
         img{
             max-width: 100%
             padding-top: 2.5em
@@ -32,7 +32,6 @@
             border-radius: .5em
             transform: translateX(50%)
             box-shadow: inset 0 -15px 0 -10px var(--mainPurple)
-
         }
     }
     input{
@@ -43,7 +42,7 @@
             display: block
         }
         & ~ .tabs-grid #tab-easyUse{
-            display: block
+            display: flex
         }
     }
     input[id="enterprise"]:checked{
@@ -51,7 +50,7 @@
             display: block
         }
         & ~ .tabs-grid #tab-enterprise{
-            display: block
+            display: flex
         }
     }
     input[id="dataOptimize"]:checked{
@@ -59,7 +58,32 @@
             display: block
         }
         & ~ .tabs-grid #tab-dataOptimize{
-            display: block
+            display: flex
+        }
+    }
+    @media screen and (min-width: 1024px){
+        border-top: none
+        text-align: left
+        padding: 1em 0
+        ul{
+            display: flex
+            justify-content: center
+        }
+        label{
+            padding: 2em 2em
+            &:after{
+                width: 100%
+                transform: translateX(0)
+            }
+        }
+        img{
+            margin-right: 5em 
+            margin-bottom: 0
+        }
+        &-content{
+            padding: 3em 0
+            flex-direction: row
+            align-items: center 
         }
     }
 }

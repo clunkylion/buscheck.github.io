@@ -76,5 +76,40 @@
                     
             } 
         }
+    } 
+    @media screen and (min-width 1024px){
+        transform: translateY(0)
+        visibility: visible
+        opacity: 1
+        position: initial
+        height auto
+        background: initial
+        a{
+            color: var(--mainPurple)
+        }
+        li{
+            border:0
+            border-radius:5px
+            margin-top: 25px
+            padding: .5em .4em
+            &:last-child{
+                border: none
+                a{
+                    border-radius:5px
+                    color: white
+                    background: #ff3b8c
+                }
+                :hover{
+                    color: white
+                    background: var(--mainPurple)
+                }
+            } 
+        }
+        ul{
+            display: flex
+        }
+        &-open{
+            display: none
+        }
     }
 }

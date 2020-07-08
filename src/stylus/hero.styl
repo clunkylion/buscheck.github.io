@@ -7,4 +7,21 @@
     &-buttons{
         padding-top: 1em
     }
+    @media screen and (min-width: 1024px){
+        text-align: left
+        padding: 1em
+        &-grid{
+            display: grid
+            grid-template-columns: 550px 1fr
+            grid-template-areas: "content image"
+            align-items: center
+        }  
+        .imageContainer{
+            grid-area: image
+            margin-left: 80px
+        }
+        &-content{
+            grid-area: content
+        }
+    }
 }
