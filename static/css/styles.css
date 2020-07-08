@@ -110,6 +110,8 @@
 }
 .tabs-content img {
   max-width: 100%;
+  padding-top: 2.5em;
+  margin-bottom: 2em;
 }
 .tabsgrid {
   margin-top: 4em;
@@ -154,6 +156,35 @@
 }
 .features {
   text-align: center;
+  padding: 1.4em 0;
+}
+.download {
+  padding: 0.6em;
+  text-align: center;
+}
+.download img {
+  max-width: 100%;
+}
+.download-grid {
+  margin-top: 2em;
+  display: grid;
+  grid-row-gap: 2em;
+}
+.download-item {
+  box-shadow: 0 10px 11px -5px rgba(255,59,140,0.4);
+  margin-top: 1em;
+  border-radius: 1.5em;
+  padding: 1em;
+  padding-top: 2em;
+  background: url("../assets/bg-dots.svg") repeat-x center bottom 100px;
+}
+.download-item .u-p {
+  margin-bottom: 4em;
+  margin-top: 0.5em;
+}
+.download-item .u-h3 {
+  margin-bottom: 0.5rem 0;
+  margin-top: 1em;
 }
 :root {
   --softBlue: #5368df;
@@ -188,6 +219,16 @@ ul {
   line-height: 1.3;
   font-weight: 600;
 }
+.u-h2 {
+  font-size: 1.5em;
+}
+.u-h3 {
+  color: var(--mainPink);
+  line-height: 1;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin: 0.7em 0;
+}
 .u-p {
   color: var(--mainPurple);
   line-height: 1.8;
@@ -208,4 +249,7 @@ ul {
 }
 .u-button:first-of-type {
   margin: 0;
+}
+.u-button.is-fullWidth {
+  width: 100%;
 }

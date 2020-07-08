@@ -1,6 +1,7 @@
 @import './hero.styl'
 @import './header.styl'
 @import './features.styl'
+@import './download.styl'
 :root{
     --softBlue: hsl(231, 69%, 60%)
     --softRed: hsl(0, 94%, 66%)
@@ -36,7 +37,14 @@ ul{
 }
 .u-h2{
     @extends .u-h1
-
+    font-size: 1.5em
+}
+.u-h3{
+    color: var(--mainPink)  
+    line-height: 1
+    font-weight: 500
+    font-size: 1.5em
+    margin: .7em 0
 }
 .u-p{
     color: var(--mainPurple)
@@ -60,5 +68,8 @@ ul{
     }
     &.is-gray{
 
+    }
+    &.is-fullWidth{
+        width 100%
     }
 }
