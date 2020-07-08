@@ -186,6 +186,43 @@
   margin-bottom: 0.5rem 0;
   margin-top: 1em;
 }
+.question {
+  border: 1px solid #f00;
+  padding: 2em 0;
+}
+.question h2 {
+  text-align: center;
+}
+.question p {
+  text-align: justify;
+}
+.carousel {
+  margin-top: 2em;
+}
+.carousel summary {
+  color: var(--mainPurple);
+}
+.carousel-content[open] summary {
+  color: var(--mainPink);
+}
+.carousel-content[open] .carousel-header {
+  border: none;
+}
+.carousel-content[open] .carousel-header::-webkit-details-marker {
+  color: var(--mainPink);
+}
+.carousel-header {
+  padding: 1em 0;
+  border-bottom: 1px solid var(--mainPink);
+  font-size: 0.9em;
+}
+.carousel-header:focus {
+  outline: 0;
+}
+.carousel-header::-webkit-details-marker {
+  color: var(--mainPurple);
+  float: right;
+}
 :root {
   --softBlue: #5368df;
   --softRed: #fa5757;

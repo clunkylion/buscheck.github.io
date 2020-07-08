@@ -1,0 +1,33 @@
+.carousel{
+    margin-top: 2em
+    summary{
+        color: var(--mainPurple)
+    }
+    &-content{
+        &[open]{
+            summary{
+                color: var(--mainPink)
+            }
+            .carousel{
+                &-header{
+                    border: none
+                    &::-webkit-details-marker{
+                        color: var(--mainPink)    
+                    }  
+                } 
+            }  
+        }    
+    }
+    &-header{  
+        padding: 1em 0 
+        border-bottom: 1px solid var(--mainPink)
+        font-size: .9em
+        &:focus{
+            outline: 0    
+        }
+        &::-webkit-details-marker{
+            color: var(--mainPurple)
+            float: right  
+        }
+    }  
+}
