@@ -1,0 +1,97 @@
+.login{
+    background: url('../assets/wave.svg') no-repeat center bottom
+    background-size: cover  
+    width: auto
+    height: 100vh
+    &-box{ 
+        border-radius: 50px 
+        width: 450px
+        height 450px
+        background: var(--mainPink)
+        top: 50%
+        left: 50%
+        position: absolute
+        transform: translate(-50%, -50%)
+        box-sizing: border-box
+        h1{
+            color: white
+            margin: 0
+            padding-top: 80px
+            text-align: center
+            font-size: 45px
+        }
+    }
+    &-avatar{  
+        width: 200px
+        height: 200px
+        border-radius: 50%
+        position: absolute
+        top: -130px
+        left: calc(55% - 125px)
+    }
+    &-form{
+        padding: 2em  
+        
+        label{
+            margin: 0
+            padding-top: 0
+            display: block
+            font-weight: bold
+            color: white
+        }
+        input{
+            width: 100%
+            margin: auto
+            margin-bottom: 30px
+            &::-webkit-input-placeholder{
+                color: white    
+            }
+        }
+        input[type="text"]
+        input[type="password"]{
+            border: none 
+            border-bottom: 2.3px solid white
+            outline: none 
+            height: 40px
+            background: transparent
+            color: white
+            font-size: 20px
+        }
+        input[type="submit"]{
+            width: 100%
+        }
+    }
+    @media screen and (max-width: 1024px){
+        background: none
+        padding: 2em
+        width: auto
+        height: auto
+        &-box{ 
+            border-radius: 50px 
+            width: 350px
+            height 450px
+            background: var(--mainPink)
+            top: 50%
+            left: 50%
+            position: absolute
+            transform: translate(-50%, -50%)
+            box-sizing: border-box
+            h1{
+                color: white
+                margin: 0
+                padding-top: 80px
+                text-align: center
+                font-size: 30px
+            }
+        }
+        &-avatar{  
+            width: 150px
+            height: 150px
+            border-radius: 50%
+            position: absolute
+            top: -85px
+            left: calc(55% - 85px)
+        }
+    }
+
+}
