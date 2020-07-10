@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
     <title>Formulario de Login</title>
-</head>
-<body>
-    
-    <section class="login">
-        <div class="u-wrapper">
-            <div class="login-box">
-                <img class="login-avatar" src="../static/assets/login-ilustration1.svg" alt="" srcset="">
-                <h1 class="u-h1">Login</h1>
-                <form action="" class="login-form">
-                    <label for="username">Nombre de usuario</label>
-                    <input type="text" placeholder="Ingresa tu nombre de usuario">
-                    <label for="password">Contraseña</label>
-                    <input type="password" placeholder="Ingresa tu contraseña">
-                    <input type="submit" value="Login" class="u-button">
-                </form>
+  </head>
+  <body>
+    <input type="checkbox" id="open" class="menu-checkbox">
+    <header class="login header">
+      <div class="u-wrapper">
+        <div class="header-content">
+          <a href="../index.html" class="header-logo"></a>
+          <label for="open" class="menu-open"></label>
+          <nav class="menu">
+            <div class="u-wrapper">
+              <ul>
+                <li>
+                  <a href="../index.html">Inicio</a>
+                </li>
+              </ul>
             </div>
+          </nav>
         </div>
+      </div>
+    </header>
+    <section class="login-hero">
+      <div class="u-wrapper">
+        <div class="login-box">
+          <img
+            class="login-avatar"
+            src="../static/assets/login-ilustration1.svg"
+            alt=""
+            srcset=""
+          />
+          <h1 class="u-h1">Login</h1>
+          <form action="" class="login-form">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" placeholder="Ingresa tu nombre de usuario" />
+            <label for="password">Contraseña</label>
+            <input type="password" placeholder="Ingresa tu contraseña" />
+            <input type="submit" value="Login" class="u-button" />
+          </form>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
