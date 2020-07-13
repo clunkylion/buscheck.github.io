@@ -24,7 +24,7 @@ export default class API {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Accept": "application/json",
+            Accept: "application/json",
           },
           body: JSON.stringify(data),
         })
@@ -33,12 +33,30 @@ export default class API {
           .then((response) => {
             if (response.status == 200) {
               //redireccion a dashboard
-              console.log("Datos Correctos");
+              let userToken = "Bearer "+response.token;
+              localStorage.setItem('userToken', userToken);
+              window.location.assign('/dashboard.html');
+            } else if (response.status == 401) {
               console.log(response);
-            } else {
-                console.log(response);
-                console.log('Datos Incorrectos o no existen')
+              swal({
+                title: "Nombre de Usuario o Contraseña incorrecta",
+                icon: "error",
+                timer: 1500,
+                button : false,
+                });
               loginForm.reset();
+              userName.focus();
+            } else if (response.status == 400) {
+              console.log(response);
+              swal({
+                title: "Usted no esta registrado",
+                text: "Pongase en contacto con la empresa..",
+                icon: "error",
+                timer: 1500,
+                button : false,
+                });
+              loginForm.reset();
+              userName.focus();
             }
           });
       }
