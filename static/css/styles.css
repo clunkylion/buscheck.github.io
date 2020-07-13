@@ -526,6 +526,12 @@
     left: calc(55% - 85px);
   }
 }
+.dashboard {
+  border: 1px solid #f00;
+}
+.dashboard-sidebar {
+  border: 1px solid #00f;
+}
 :root {
   --softBlue: #5368df;
   --softRed: #fa5757;
