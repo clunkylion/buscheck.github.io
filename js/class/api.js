@@ -10,7 +10,7 @@ export default class API {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
             },
-            body: data
+            body: JSON.stringify(data)
         })
         .then(res => res.json())
         .catch(error => console.error('Error:', error))
