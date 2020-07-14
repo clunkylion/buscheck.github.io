@@ -20,7 +20,7 @@ export default class API {
           username: userName.value,
           password: password.value,
         };
-        fetch("http://157.245.186.141/api/loginWeb/", {
+        fetch("https://www.api-buscheck.info/api/loginWeb/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -70,4 +70,5 @@ export default class API {
       window.location.assign('/components/login.html');
     })
   }
+
 }
