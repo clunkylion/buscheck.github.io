@@ -62,4 +62,12 @@ export default class API {
       }
     });
   }
+  logouth(){
+    console.log("hola cerrar sesion")
+    const logouthBtn = document.getElementById('logouthBtn');
+    logouthBtn.addEventListener('click', () => {
+      localStorage.removeItem('userToken');
+      window.location.assign('/components/login.html');
+    })
+  }
 }
