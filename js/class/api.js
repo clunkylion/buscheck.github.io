@@ -20,12 +20,16 @@ export default class API {
           username: userName.value,
           password: password.value,
         };
-        fetch("https://www.api-buscheck.info/api/loginWeb/", {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Accept', 'application/json');
+        headers.append('Access-Control-Allow-Origin', 'https://cocky-bhabha-e2e8c0.netlify.app');
+        headers.append('Access-Control-Allow-Credentials', 'true');
+        headers.append('GET', 'POST', 'OPTIONS');
+        fetch("https://www.api-buscheck.info/api/loginWeb", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
+          headers: headers,
+          mode: 'cors',
           body: JSON.stringify(data),
         })
           .then((res) => res.json())
