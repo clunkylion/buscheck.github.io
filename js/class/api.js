@@ -37,7 +37,7 @@ export default class API {
               //redireccion a dashboard
               let userToken = "Bearer "+response.token;
               localStorage.setItem('userToken', userToken);
-              window.location.assign('/dashboard.html');
+              window.location.assign('/html/dashboard.html');
             } else if (response.status == 401) {
               console.log(response);
               swal({
