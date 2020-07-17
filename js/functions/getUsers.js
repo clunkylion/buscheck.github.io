@@ -10,5 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((res) => res.json())
     .catch((error) => console.error("Error:", error))
-    .then((result) => console.log(result))
+    .then((r) => {
+        setData(r)
+    })
 });
+const content = document.getElementById('users-content')
+function setData(r) {
+    let roles = r.Data.user
+    console.log(roles)
+    for (let [key,setContent] of Object.entries(r)){
+        console.log(`${key}: ${setContent}`)
+    }
+}
+

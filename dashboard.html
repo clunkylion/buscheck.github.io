@@ -3,53 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/html/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css"
+      rel="stylesheet"
+    />
+    <link href="/html/css/animate.css" rel="stylesheet" />
+    <link href="/html/css/style.css" rel="stylesheet" />
+    <link href="/html/css/colors/default.css" id="theme" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../static/css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
+    />
     <title>Panel de Administración</title>
   </head>
-  <body>
-    <input type="checkbox" id="open" class="menu-checkbox" />
-    <header class="header">
-      <div class="u-wrapper">
-        <div class="header-content">
-          <a href="../index.html" class="header-logo"></a>
-          <label for="open" class="menu-open"></label>
-          <nav class="menu">
-            <div class="u-wrapper">
-              <ul>
-                <li>
-                    <a href="#" class="">MENU</a>
-                </li>
-                <li>
-                    <a href="#">Total de Ventas</a>
-                </li>
-                <li>
-                    <a href="#">Usuarios</a>
-                </li>
-                <li> 
-                    <a href="#">Buses</a>
-                </li>
-                <li>
-                    <a href="#">Horarios</a>
-                </li>
-                <li>
-                    <a href="#" id="logouthBtn">Cerrar Sesión</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+  <body class="">
+    <header class="fix-header">
+      <nav class="navbar navbar-default navbar-static-top m-b-0">
+        <div class="navbar-header">
+          <div class="top-left-part">
+            <a class="logo dashboardBtn">
+              <span class="hidden-xs">
+                <img
+                  src="../plugins/images/logo - copia.png"
+                  alt="home"
+                  class="light-logo"
+                />
+              </span>
+            </a>
+          </div>
+          <ul class="nav navbar-top-links navbar-right pull-right">
+            <li>
+              <a
+                class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"
+                href="javascript:void(0)"
+                ><i class="fa fa-bars"></i
+              ></a>
+            </li>
+            <li>
+              <a class="profile-pic" href="#">
+                <img
+                  src="../plugins/images/users/usuario.svg"
+                  alt="user-img"
+                  width="36"
+                  class="img-circle"
+                /><b class="hidden-xs">#Usuario</b></a
+              >
+            </li>
+            <li>
+              <a class="profile-pic" id="logouthBtn">
+                <b class="hidden-xs">Cerrar Sesión</b></a
+              >
+            </li>
+          </ul>
         </div>
-      </div>
+      </nav>
     </header>
-    <div class="dashboard">
-        <div class="dashboard-content">
-            
+    <section class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav slimscrollsidebar">
+        <div class="sidebar-head">
+          <h3>
+            <span class="fa-fw open-close"
+              ><i class="ti-close ti-menu"></i
+            ></span>
+            <span class="hide-menu">NombreEmpresa</span>
+          </h3>
         </div>
+        <ul class="nav" id="side-menu">
+          <li style="padding: 70px 0 0;">
+            <a id="dashboardBtn" class="waves-effect"
+              ><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a class="waves-effect" id="manageUsersBtn"
+              ><i class="fa fa-user fa-fw" aria-hidden="true"></i>Administrar
+              Usuarios</a
+            >
+          </li>
+          <li>
+            <a id="manageBusesBtn" class="waves-effect"
+              ><i class="fa fa-truck fa-fw" aria-hidden="true"></i>Administrar
+              Buses</a
+            >
+          </li>
+          <li>
+            <a id="manageHoursBtn" class="waves-effect"
+              ><i class="fa fa-table fa-fw" aria-hidden="true"></i>Administrar
+              Horarios</a
+            >
+          </li>
+          <li>
+            <a id="salesBtn" class="waves-effect"
+              ><i class="fa fa-signal fa-fw" aria-hidden="true"></i>Administrar
+              Ventas</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="dashboard">
+      <div class="dashboard-content" id="dashboard">
+
+      </div>
     </div>
-    <script type="module" src="/js/functions/logouthUsers.js" ></script>
+    <script src="js/components/dashboard.js"></script>
+    <script src="js/components/manageBuses.js"></script>
+    <script src="js/components/manageHours.js"></script>
+    <script src="js/components/sales.js"></script>
+    <script src="js/components/manageUsers.js"></script>
+    <script type="module" src="/js/functions/logouthUsers.js"></script>
+    <script type="module" src="/js/functions/logouthUsers.js"></script>
+    <script src="/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/html/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <script src="/html/js/jquery.slimscroll.js"></script>
+    <script src="/html/js/waves.js"></script>
+    <script src="/html/js/custom.min.js"></script>
   </body>
 </html>
